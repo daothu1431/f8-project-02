@@ -43,6 +43,27 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+    /* cursor; pointer (chuyển thành dấu bàn tay) */
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+/* hiển thị dấu 3 chấm */
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Tự động xuống dòng */
+.break-all {
+    word-break: break-all;
 }
 /* ============Header============ */
 .header {
@@ -107,6 +128,8 @@ a {
     margin-left: 41px;
 }
 
+/* =============Hero================== */
+
 .hero {
     padding-top: 56px;
     padding-bottom: 65px;
@@ -128,6 +151,17 @@ a {
     object-fit: cover;
     border-radius: 20px;
     vertical-align: bottom;
+}
+
+.hero-sumary {
+    position: absolute;
+    width: 270px;
+    bottom: 48px;
+    right: 0;
+    padding: 24px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
 }
 
 .hero-sumary .item {
@@ -178,29 +212,14 @@ a {
     color: #171100;
 }
 
-.hero .media-block .hero-sumary {
-    position: absolute;
-    width: 270px;
-    bottom: 48px;
-    right: 0;
-    padding: 24px;
-    background: #ffffff;
-    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
-}
-
 .hero .content-block {
     width: 52%;
     padding: 64px 0 0 130px;
 }
 
-.hero .content-block .heading {
-    font-family: var(--font-heading);
-    font-weight: 700;
+.heading.lv1 {
     font-size: 5.8rem;
     line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
 }
 
 .hero .content-block .desc {
@@ -270,4 +289,137 @@ a {
     font-family: var(--font-heading);
     line-height: 1.2;
     color: #171100;
+}
+
+/* =========Popular============= */
+.popular {
+    padding: 65px 0;
+    margin-top: 135px;
+}
+
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading.lv2 {
+    font-size: 3.8rem;
+}
+
+.popular-top .info .desc {
+    max-width: 458px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+    margin-top: 16px;
+}
+
+.popular-top .controls-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.popular-top .controls-btn:nth-child(2) {
+    background: var(--color-primary);
+    margin-left: 18px;
+}
+
+/* ==========Course List========= */
+
+.course-list {
+    display: flex;
+    margin-top: 55px;
+    gap: 0 30px;
+}
+
+.popular .course-item {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #e2dfda;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.08);
+}
+
+.popular .course-item .thumb {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px 12px 0px 0px;
+    transition: transform 0.8s;
+}
+
+.popular .course-item .thumb:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.course-item .info .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .rating {
+    display: flex;
+    align-items: center;
+}
+
+.popular .info .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding-right: 6px;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.popular .course-item .info .desc {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.popular .info .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.popular .info .foot .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+}
+
+.popular .info .value {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #fea31b;
+    margin-left: 6px;
+}
+
+.popular .foot .book-btn {
+    border: none;
+}
+
+.popular .foot .book-btn:hover {
+    color: #fff;
+    background: var(--color-primary);
 }
